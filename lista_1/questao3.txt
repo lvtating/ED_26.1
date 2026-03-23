@@ -1,0 +1,21 @@
+Sim, é possível! 
+Em C, como a linguagem é de baixo nível, não é possível usar a técnica
+de empacotamento presente em python, mas é possível usar aritmética e 
+operadores bit a bit para isso.
+
+ex.: com aritmética
+
+int x = 10, y = 20;
+
+x = x + y;      (x agora vale 30)
+y = x - y;      (y agora vale 10, antigo valor de x)
+x = x - y;      (x agora vale 20, antigo valor de y)
+
+ex.: bit a bit usando o operador XOR (caso x e y sejam muito grandes e ultrapassem
+a capacidade do tipo int)
+
+int x = 10, y = 20;
+
+x = x ^ y;
+y = x ^ y;
+x = x ^ y;
