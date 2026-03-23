@@ -1,0 +1,53 @@
+(a) A idade de uma pessoa em um formulário para um banco de dados com milhões de registros.
+- tipo: unsigned char
+- razão: uma idade nunca é negativa e raramente passa de 150. O char em C ocupa apenas 1 byte (8 bits), 
+permitindo valores de 0 a 255. Em um banco de dados com milhões de registros, usar 1 byte em vez de 4 bytes (int) 
+economiza megabytes de memória.
+
+*(b) A idade de uma pessoa em dias para um programa em que desejamos somar ou subtrair um número
+arbitrário de dias.
+- tipo: int
+- razão: se uma pessoa vive 100 anos, ela tem cerca de 36.500 dias. o unsigned char não cabe, uma vez que 
+suporta apenas 1 byte, mas o int padrão (geralmente 4 bytes) suporta até mais de 2 bilhões, o que é mais que 
+o suficiente para somas e subtrações arbitrárias de dias sem risco de estouro (overflow).
+
+*(c) A nota de um estudante.
+- tipo: float
+- razão: notas geralmente têm casas decimais. o float ocupa 4 bytes e oferece um precisão de cerca de 7 casas
+decimais.
+
+(d) A quantidade de chuva média no mês de fevereiro.
+- tipo: float
+- razão: médias pluviométricas resultam em números reais. como a precisão extrema não é vital para uma média mensal 
+simples, o float equilibra bem economia de espaço e utilidade.
+
+(e) O ângulo de rotação de um robô cirurgião a ser transmitido pela internet.
+- tipo: double
+- razão: aqui a precisão é crítica. um erro na oitava casa decimal pode significar um corte no lugar errado. 
+o double (precisão dupla) ocupa 8 bytes e garante cerca de 15 a 17 casas decimais de precisão. 
+
+*(f) O tamanho do seu quintal.
+- tipo: float
+- razão: áreas de imóveis residenciais não exigem precisão de nanômetros. O float atende bem para medidas 
+em metros quadrados com duas ou três casas decimais.
+
+*(g) O número de estrelas do universo.
+- tipo: unsigned long long
+- razão: estamos falando de números astronômicos. o long long ocupa 8 bytes e, sendo unsigned (sem sinal), ele 
+dobra a capacidade positiva, chegando a 1.8 * 10¹⁹. se for maior que isso, usaríamos notação científica com long double.
+
+(h) O saldo da conta bancária.
+- tipo: double/long int
+- razão: saldos bancários podem ser muito grandes e exigem precisão exata nos centavos. muitos sistemas financeiros usam inteiros 
+longos para armazenar tudo em centavos (para evitar erros de arredondamento de ponto flutuante), mas o double é a escolha padrão 
+para cálculos decimais amplos.
+
+(i) A posição de uma partícula em um jogo de alta resolução.
+- tipo: float
+- razão: motores de jogos (como unity ou unreal) usam float por padrão. GPUs são otimizadas para processar milhões de floats 
+simultaneamente. "alta resolução" aqui refere-se à imagem; a posição matemática raramente precisa da memória extra de um double.
+
+*(j) Uma sequência de números inteiros representando as escolhas
+- tipo: int ou short
+- razão: se as escolhas forem simples (opção 1, 2, 3), o short (2 bytes) economiza espaço. se a sequência for grande ou as opções 
+forem variadas, o int é o tipo mais "natural" para o processador lidar.
