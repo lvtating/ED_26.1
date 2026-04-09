@@ -8,7 +8,7 @@ int subtracao(int x, int y){
     return x - y;
 }
 
-int multipicacao(int x, int y){
+int multiplicacao(int x, int y){
     return x * y;
 }
 
@@ -39,7 +39,7 @@ int main(){
 
     case 3:
         multipicacao(n1, n2);
-        printf("\nproduto = %d\n", multipicacao(n1, n2));
+        printf("\nproduto = %d\n", multiplicacao(n1, n2));
         break;
 
     case 4:

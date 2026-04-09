@@ -9,8 +9,6 @@ int main(){
     scanf(" %s", url);
     scanf(" %c", &delimitador);
 
-    int tamanho = strlen(url);
-
     for(int i = 0; url[i] != '\0'; i++){
         if(url[i] == delimitador){
             break;
