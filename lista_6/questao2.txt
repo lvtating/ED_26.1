@@ -1,0 +1,24 @@
+(a) Qual a diferença entre passagem por valor e referência?
+
+- passagem por valor: é entregue para a função uma 'cópia'. qualquer alteração feita na função, na main
+será como se ela não tivesse agido, fazendo com que aquela variável, por exemplo, permaneça com o mesmo 
+valor.
+
+- passagem por referência: aqui, você está passando o endereço (ponteiro) daquela variável/cte, dando
+o poder para a função declarada alterar de forma "permanente" (visível em todo o programa) o valor passado.
+
+(b) Quando é vantajoso passar registros (struct) por referências?
+
+quando uma struct é muito grande, passar por valor exige que o computador copie cada byte da struct para uma 
+nova área de memória. já passar por referência copia apenas o endereço (geralmente 4 ou 8 bytes), independentemente 
+do tamanho da struct.
+
+se a função precisa atualizar/alterar algum dado dentro da struct,  ela precisa do endereço original. 
+se você passar por valor, estará alterando apenas uma cópia temporária 
+que será descartada quando a função terminar.
+
+(c) E quando é melhor usar passagem por valores?
+
+em structs pequenas, o custo de copiar 8/4 bytes é o o mesmo de passar um ponteiro.
+quando o usuário não quer mudar nenhum dado original da main, passar por valores cria uma segurança, uma
+vez que está sendo passado para a função uma cópia.
