@@ -1,4 +1,4 @@
-//interface complexos.h
+//implementação complexos.h
 
 #include <stdio.h>
 #include <math.h>
