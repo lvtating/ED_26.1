@@ -1,0 +1,38 @@
+Questão 1. Notação O
+(a) Escreva as funções a seguir usando uma notação O adequada e mais simples:
+
+    • n⁵ + 100000 = O(n⁵);
+
+    • log35(n^n) = O(n log(n));
+
+        log a^b = b.log(a), então log n^n = n.log(n)
+
+    • 2^(n − 0,1) = O(2^n);
+
+        = 2^n . 2⁻⁰·¹ (2⁻⁰·¹ é uma cte)
+
+    • 2^(logn²) - O(n²);
+
+        x^(log a^b) = b, então 2^(log n²) = n²;
+
+    • 1000¹⁰⁰⁰^n + n^n = O(1000¹⁰⁰⁰^n);
+
+        1000¹⁰⁰⁰^n = (10³)⁽¹⁰^³⁾^n = 10³·¹⁰^^3n cresce muito mais rápido
+
+
+
+(b) Prove ou desprove as afirmações:
+
+    • 2^n = O(2^(n − 0,001))   verdadeira;
+
+        2^n <= c . 2^(n − 0,001) -----> 2^n <= c . 2^n/2⁰·⁰⁰¹
+        se c >= 2⁰·⁰⁰¹, a desigualdade se mantém para todo n >= 1
+
+    • 2^n = O(2^n(1 - 0,001))     falso;
+
+        2^n(1 - 0,001) = 2⁰·⁹⁹⁹^n , 2^n cresce mais rápido, então seria O(2^n)
+
+
+    • n² = O(n¹·⁹⁹⁹)   falso.
+
+        n² cresce mais rápido que n¹·⁹⁹⁹
