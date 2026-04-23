@@ -9,9 +9,9 @@ Questão 1. Notação O
 
     • 2^(n − 0,1) = O(2^n);
 
-        = 2^n . 2⁻⁰·¹ (2⁻⁰·¹ é uma cte)
+        2^n . 2⁻⁰·¹ (2⁻⁰·¹ é uma cte)
 
-    • 2^(logn²) - O(n²);
+    • 2^(logn²) = O(n²);
 
         x^(log a^b) = b, então 2^(log n²) = n²;
 

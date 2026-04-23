@@ -2,5 +2,5 @@ Quem faz mais multiplicações: a versão iterativa ou a versão recursiva do fa
 mesma quantidade de memória?
 
 - o número de multiplicações é o mesmo
-- falando de memória, a versão iterativa gasta mais memória que a iterativa, uma vez que, a cada vez que chama 
-a função, são criadas mais variáveis, etc. enquanto a versão recursiva lida apenas com duas variáveis.
+- falando de memória, a versão recursiva gasta mais memória que a iterativa, uma vez que, a cada vez que chama 
+a função, são criadas mais variáveis, etc. enquanto a versão iterativa lida apenas com duas variáveis.
