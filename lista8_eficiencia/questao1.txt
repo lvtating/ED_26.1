@@ -26,7 +26,7 @@ Questão 1. Notação O
     • 2^n = O(2^(n − 0,001))   verdadeira;
 
         2^n <= c . 2^(n − 0,001) -----> 2^n <= c . 2^n/2⁰·⁰⁰¹
-        se c >= 2⁰·⁰⁰¹, a desigualdade se mantém para todo n >= 1
+        se c >= 2⁰·⁰⁰¹, a desigualdade se mantém para todo n0 >= 1
 
     • 2^n = O(2^n(1 - 0,001))     falso;
 
