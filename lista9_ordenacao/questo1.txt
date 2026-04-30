@@ -1,0 +1,23 @@
+Questão 1. Um algoritmo de ordenação é considerado estável se dois elementos com a
+mesma chave são mantidos na mesma ordem em que o vetor original. Por exemplo, vamos 
+ordenar por mês as datas:   5/7/2015,   2/7/2015,   7/9/2010,   6/7/1999
+
+estável:        5/7/2015       2/7/2015         6/7/1999        7/9/2010
+
+não-estável:        2/7/2015        5/7/2015        6/7/1999        7/9/2010
+
+(a) Justifique porque a ordenação por seleção é estável.
+a ordenação por seleção é estável porque, se os números são iguais, não ocorre a troca
+
+(b) Seja ord_mes uma função que ordena um vetor por mês de maneira não estável e ord_dia uma função
+que ordena um vetor por dia de maneira estável. É possível ordenar por aniversário (isso é, por mês e
+depois dia) só chamando as duas funções? E se fosse o contrário (por dia e depois mês)?
+
+no sentido mês e depois dia, seria possível apenas chamando a função ord_dia primeiro. isso porque, após os 
+meses estarem ordenados, a função ord_dia seria chamada depois e poderia alterar a ordem de meses
+    ex.:    21/04/2026      11/12/2026      24/07/2026
+
+    (ord_mes):      21/04/2026      24/07/2026      11/12/2026
+    (ord_dia):      11/12/2026      21/04/2026      24/07/2026
+
+isso vale para ambos os casos.
