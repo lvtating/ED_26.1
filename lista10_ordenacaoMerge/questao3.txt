@@ -1,0 +1,44 @@
+Questão 3. Eficiência do QuickSort Ao contrário do MergeSort que tem complexidade de pior caso
+O(nlogn), o QuickSort tem complexidade de pior caso O(n²) (na verdade, exatamente Θ(n²)). 
+Surpreendentemente, na prática esse algoritmo é tão rápido quanto o MergeSort e (algumas vezes) até mais eficiente.
+Tente responder as questões a seguir:
+
+(a) Descreva o comportamento do particionamento para vetores: {1,2,3,4,5}, {5,4,3,2,1}, {1,5,4,2,3}.
+Pode ser útil tentar simular os passos iniciais.
+
+                {1, 2, 3, 4*, 5}:   
+            {1*, 2, 3}           {5}
+          {Θ}       {*2,3}
+                  {Θ}    {3}
+
+
+                {5, 4, 3*, 2, 1}:
+            {5,4*}           {2,1*}
+          {5}   {Θ}         {2}   {Θ}
+
+
+                {1, 5, 4*, 2, 3}:
+            {1,5*}            {2,3*}
+           {1}  {Θ}          {2}  {Θ}
+
+(b) A partição do vetor nem sempre será balanceada, isso é, nem sempre irá dividir o vetor em partes
+iguais. Você consegue dar um exemplo de vetor com n posições em que toda chamada de particionamento deixa uma parte com apenas um elemento?
+
+sim. por exemplo no vetor {1, 2, 3, 4, 5}, em que alguma das pontas é o pivô:
+
+                {1*, 2, 3, 4, 5}:   
+            {Θ}          {2*, 3, 4, 5}
+                        {Θ}     {3*, 4, 5}
+                               {Θ}    {4*, 5}
+                                     {Θ}    {5}
+
+(c) Com que frequência você acha que o exemplo do item anterior acontece na prática? Tente pensar
+em uma maneira que diminua essa probabilidade (é necessário que o pivô sempre seja o primeiro
+elemento?).
+
+na prática, receber um vetor já ordenado (ou quase ordenado) é bastante comum. com pivô fixo no primeiro elemento, isso se torna um problema real, 
+sempre, em sua partição, deixando um vetor "sozinho" (como na questão b).
+algumas estratégias clássicas para reduzir essa probabilidade:
+a estratégia mais usada na prática é o pivô aleatório: o pior caso ainda existe em teoria, mas sua probabilidade cai para (n!)⁻¹, essencialmente 
+impossível de ocorrer por acaso. é por isso que o quickSort aleatorizado tem complexidade esperada O(n logn) para 
+qualquer entrada, tornando-o competitivo com o mergesort na prática.

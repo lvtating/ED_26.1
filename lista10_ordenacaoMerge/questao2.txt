@@ -1,0 +1,10 @@
+Questão 2.  No algoritmo de intercalação, alocamos um vetor auxiliar com tamanho máximo fixo MAX.
+Vimos que podemos flexibilizar essa restrição usando malloc para alocar memória no início da função e
+free para liberar memória no final da função. No entanto, essas funções são bem caras, isso é, gastam
+muito tempo, o que pode fazer com que o algoritmo fique mais lento já que a função intercalar pode
+ser chamada diversas vezes. Como você resolveria esse problema?
+
+nesse caso, o ideal seria usar o mergesort, pois é mais rápido do que o heapsort
+• mas precisa de memória adicional
+– tanto para o vetor auxiliar - O(n)
+– quanto para a pilha de recursão - O(lg n)
