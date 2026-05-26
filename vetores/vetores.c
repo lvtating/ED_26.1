@@ -1,6 +1,6 @@
 #include "vetores.h"
 
-/*analogia das "salão para eventos¨
+/*analogia do "salão para eventos¨
         v: salão
         dados: cadeiras
         n: qtd. de cadeiras usadas 
