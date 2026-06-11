@@ -4,7 +4,4 @@ free para liberar memória no final da função. No entanto, essas funções sã
 muito tempo, o que pode fazer com que o algoritmo fique mais lento já que a função intercalar pode
 ser chamada diversas vezes. Como você resolveria esse problema?
 
-nesse caso, o ideal seria usar o mergesort, pois é mais rápido do que o heapsort
-• mas precisa de memória adicional
-– tanto para o vetor auxiliar - O(n)
-– quanto para a pilha de recursão - O(lg n)
+Solução: alocar o vetor auxiliar uma única vez fora da função e reutilizá-lo.
