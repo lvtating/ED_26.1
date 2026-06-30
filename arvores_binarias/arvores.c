@@ -39,9 +39,6 @@ int altura(p_no raiz){
     /*ou return 1 + (h_esq > h_dir ? h_esq : h_dir);*/
 }
 
-
-/*torneio*/
-
 p_no torneio(int *v, int inicio, int fim){
     if(inicio == fim)
         return criar_arvore(v[inicio], NULL, NULL);
@@ -53,7 +50,7 @@ p_no torneio(int *v, int inicio, int fim){
     return criar_arvore(valor, esq, dir);
 }
 
-/*percurso em profundidade e expressões*/
+
 void pre_ordem(p_no raiz){
     if(raiz != NULL){
         printf("%d\n", raiz->dado);
@@ -112,7 +109,7 @@ void percurso_em_largura(p_no raiz){
     destruir_fila(fila);
 }
 
-//numero de folhas
+
 int folhas(p_no raiz){
     if(raiz == NULL)
         return 0;
@@ -134,7 +131,7 @@ p_no apaga_folhas(p_no raiz, int x){
     return raiz;
 }
 
-//comparar se duas arvores sao iguais
+
 int iguais(p_no arvore1, p_no arvore2){
     if(arvore1 == NULL && arvore2 == NULL)
         return 1;
